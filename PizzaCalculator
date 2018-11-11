@@ -1,20 +1,23 @@
-// This imports the Swing function.
+import java.awt.BorderLayout;
+
+//This imports the Swing function.
 import javax.swing.*;
 
-// This is a class called PizzaCalculator.
+
+//This is a class called PizzaCalculator.
 class PizzaCalculator {
 	
 	PizzaCalculator(){
 		// This Jframe object creates a Jframe with "Pizza Calculator" being placed on top of the frame.
 		JFrame frame = new JFrame("Pizza Calculator");
 		
-		frame.setSize(1000,1000);
+		frame.setSize(600,500);
 		
-		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JLabel jL1 = new JLabel("Size");
-		frame.add(jL1);
-		
+		frame.add(jL1, BorderLayout.NORTH);
+	
 		frame.setVisible(true);
 		
 		jL1 = new JLabel("Toppings");
@@ -23,7 +26,7 @@ class PizzaCalculator {
 		frame.setVisible(true);
 		
 		jL1 = new JLabel("Price:");
-		frame.add(jL1);
+		frame.add(jL1, BorderLayout.SOUTH);
 		
 		frame.setVisible(true);
 	}
