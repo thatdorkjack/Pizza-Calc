@@ -1,38 +1,64 @@
-import java.awt.BorderLayout;
+/*
+  Program: CS 120-101 Group 2 Project
+  Programmers: Joshua Moore, Jack Brown, Erin Fife, and Sam Burdette 
+  Description: This program demonstrates calculation of an order of a pizza.
+*/
 
-//This imports the Swing function.
+// The Swing and BorderLayout function are being imported.
 import javax.swing.*;
+import java.awt.BorderLayout;
+ 
 
-
-//This is a class called PizzaCalculator.
+// This is a class called PizzaCalculator.
 class PizzaCalculator {
 	
+	// This is the PizzaCalculator constructor.
 	PizzaCalculator(){
-		// This Jframe object creates a Jframe with "Pizza Calculator" being placed on top of the frame.
+		// This Jframe object named frame creates a new frame with "Pizza Calculator" being passed as the name of the frame.
 		JFrame frame = new JFrame("Pizza Calculator");
 		
+		// The setSize method, in reference of frame sets the size to the frame when passed (width & height).
 		frame.setSize(600,500);
 		
+		// A setDefaultOeration method in reference of frame is created to set a close operation for frame.
+		// An passed argument EXIT_ON_CLOSE in reference to JFrame allows the frame to exit on close.
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		// A JLabel object named jL1 is created and given the label name is passed.
+		// The add function, in reference to frame, uses the BorderLayout function to set to the north position of the frame when passed.
 		JLabel jL1 = new JLabel("Size");
 		frame.add(jL1, BorderLayout.NORTH);
-	
+		
+		// The setVisible method, in reference of frame, is used to show the name of each label in the frame.
+		// The true value is passed as the argument.
 		frame.setVisible(true);
 		
+		// A new jL1 label name is passed to JLabel.
+		// The add function, in reference to frame, without the BorderLayout function, to set to the default position of the frame when passed.
 		jL1 = new JLabel("Toppings");
 		frame.add(jL1);
 		
+		// The setVisible method, in reference of frame, is used to show the name of each label in the frame.
+		// True value is passed as the argument.
 		frame.setVisible(true);
 		
+		// A new jL1 label name is passed to JLabel.
+		// The add function, in reference to frame, without the BorderLayout function, to set to the south position of the frame when passed.
 		jL1 = new JLabel("Price:");
 		frame.add(jL1, BorderLayout.SOUTH);
 		
+		// The setVisible method, in reference of frame, is used to show the name of each label in the frame.
+		// True value is passed as the argument.
 		frame.setVisible(true);
+		
 	}
 	
+	// This is the main method of PizzaCalculator.
 	public static void main(String args[]) {
+		
+		// The invokeLater method, in reference of SwingUtilities, passes a Runnable method to allow the Frame to open with everything in it.
 		SwingUtilities.invokeLater(new Runnable() {
+			// The public void method run will allow the PizzaCalculator method to be called to run.
 			public void run() {
 				new PizzaCalculator();
 			}
